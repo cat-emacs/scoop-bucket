@@ -1,12 +1,12 @@
 {
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Independent Android and Gradle project system",
     "homepage": "https://github.com/cat-emacs/android-project",
     "license": "GPL-3.0-or-later",
     "depends": "java/temurin17-jdk",
-    "url": "https://github.com/cat-emacs/android-project/releases/download/v0.1.1/android-project-0.1.1.zip",
-    "hash": "b6c60978e1f96b5583e281ac1fae7278474cf027dba4a9c4b34368a0f89e17ad",
-    "extract_dir": "android-project-0.1.1",
+    "url": "https://github.com/cat-emacs/android-project/releases/download/v0.1.2/android-project-0.1.2.zip",
+    "hash": "23e17a4e0fb9bcf2d6103701cb5408f9ab3582d86fb12088e1a5be62bdc69335",
+    "extract_dir": "android-project-0.1.2",
     "bin": "bin\\android-project.bat",
     "checkver": {
         "github": "https://github.com/cat-emacs/android-project"

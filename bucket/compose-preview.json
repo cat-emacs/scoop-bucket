@@ -1,12 +1,12 @@
 {
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Compose Preview rendering with the standalone layoutlib renderer",
     "homepage": "https://github.com/cat-emacs/compose-preview",
     "license": "GPL-3.0-or-later",
-    "depends": "java/temurin17-jdk",
-    "url": "https://github.com/cat-emacs/compose-preview/releases/download/v0.1.4/compose-preview-0.1.4.zip",
-    "hash": "ab4dae8566538dde04f4053f8b6943814e01006e6f424c46cf0bec50949a26d9",
-    "extract_dir": "compose-preview-0.1.4",
+    "depends": "java/temurin21-jdk",
+    "url": "https://github.com/cat-emacs/compose-preview/releases/download/v0.1.5/compose-preview-0.1.5.zip",
+    "hash": "b7c32e79e258c2d4e4ce6b09d707a45e61988cfb41dd426e29af6cdb152084d8",
+    "extract_dir": "compose-preview-0.1.5",
     "bin": "bin\\compose-preview.bat",
     "checkver": {
         "github": "https://github.com/cat-emacs/compose-preview"

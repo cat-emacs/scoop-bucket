@@ -11,8 +11,10 @@ compose-preview doctor --json
 ```
 
 Requires an existing [Scoop](https://scoop.sh) installation. The Java bucket
-provides the declared `temurin17-jdk` dependency. No Kotlin compiler or GitHub
-Packages credentials are needed. Use a project-compatible `JAVA_HOME` when needed.
+provides `temurin17-jdk` for Android Project and `temurin21-jdk` for Compose
+Preview. Preview CLI/renderer require Java 21+; project Gradle JVM policy or
+`--gradle-java-home` can select a different build JDK. No Kotlin compiler or
+GitHub Packages credentials are needed.
 
 Manifests pin release archives and SHA-256 values. CI tests a real Scoop install,
 command shims and doctor output on Windows; it does not claim full Android

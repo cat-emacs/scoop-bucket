@@ -22,6 +22,11 @@ jobs:
           foreach ($name in @('android-project', 'compose-preview')) {
             scoop install "$env:GITHUB_WORKSPACE/bucket/$name.json"
             if ($LASTEXITCODE -ne 0) { throw "Install failed: $name" }
+            $jdk = if ($name -eq 'compose-preview') { 'temurin21-jdk' } else { 'temurin17-jdk' }
+            $env:JAVA_HOME = (scoop prefix $jdk).Trim()
+            if ($LASTEXITCODE -ne 0) { throw "JDK lookup failed: $jdk" }
             $result = & $name doctor --json | ConvertFrom-Json
             if ($LASTEXITCODE -ne 0 -or $result.schemaVersion -ne 1 -or $result.status -ne 'ready') { throw "Doctor failed: $name" }
+            $major = if ($name -eq 'compose-preview') { '21' } else { '17' }
+            if (($result.javaVersion -split '\.')[0] -ne $major) { throw "Wrong JVM: $name $($result.javaVersion)" }
           }
